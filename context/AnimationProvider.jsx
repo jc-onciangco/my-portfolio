@@ -9,6 +9,7 @@ export const animationContext = () => {
 
 const AnimationProvider = ({children}) => {
     const [isLoading, setIsLoading] = useState(() => true)
+    const [allowNonInitialAnimation, setAllowNonInitialAnimation] = useState(false)
 
     useEffect(() => {
 
@@ -22,10 +23,16 @@ const AnimationProvider = ({children}) => {
         setIsLoading(true)
     }
 
+    const allowNonInitial = () => {
+        setAllowNonInitialAnimation(true)
+    }
+
     const value = {
         isLoading,
         loadingFinished,
-        setLoading
+        setLoading,
+        allowNonInitialAnimation,
+        allowNonInitial
     }
 
     return (

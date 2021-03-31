@@ -23,5 +23,6 @@ a {
 }
 
 * {
+  cursor: none;
   box-sizing: border-box;
 }

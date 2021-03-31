@@ -18,7 +18,7 @@ const Navigation = ({children, pathname}) => {
 
     const cursorGrow = () => {
       const cursor = document.querySelector('.cursor-style')
-      cursor.style.transform = 'translate(-50%, -50%) scale(1.3)'
+      cursor.style.transform = 'translate(-50%, -50%) scale(1.5)'
     }
 
     const cursorShrink = () => {
@@ -78,6 +78,8 @@ const Navigation = ({children, pathname}) => {
                     width: ${whatPathname? '90%' : '70%'};
                     height: 100%;
                     background-color: #FFFB05;
+                    z-index: 1;
+                    transform: translate(0,0);
                 }
 
                 .grid-design-container {
@@ -96,6 +98,7 @@ const Navigation = ({children, pathname}) => {
                 .box {
                     position: relative;
                     background-color: #FFFB05;
+                    overflow: hidden;
                 }
 
                 .nav-link {
@@ -117,6 +120,7 @@ const Navigation = ({children, pathname}) => {
                 .about-link:hover {
                     color: #FFFB05;
                     background-color: #2E3632;
+                    letter-spacing: 3px;
                 }
 
               `}

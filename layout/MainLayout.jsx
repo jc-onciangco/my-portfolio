@@ -58,6 +58,7 @@ const MainLayout = ({children, siteData}) => {
             <div className="main-container">
                 <Head>
                     <title>{siteData.name}</title>
+                    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
                 <MessengerCustomerChat pageId="113254777524229" appId="1253077365086541"/>
@@ -109,7 +110,7 @@ const MainLayout = ({children, siteData}) => {
                         z-index: 100;
                         pointer-events: none;
                         mix-blend-mode: multiply;
-                        opacity: 0.1;
+                        opacity: 0.15;
                     }
 
                     .cursor-style {
@@ -117,14 +118,14 @@ const MainLayout = ({children, siteData}) => {
                         left: 0;
                         top: 0;
                         transform: translate(-50%, -50%) scale(1);
-                        height: 70px;
-                        width: 70px;
+                        height: 50px;
+                        width: 50px;
                         background-color: #FFFB05;
                         z-index: 50;
                         pointer-events: none;
                         border-radius: 50%;
                         mix-blend-mode: difference;
-                        transition: transform 0.5s linear;
+                        transition: 0.1s linear;
                     }
 
                     .cursor-style::before {
@@ -145,8 +146,8 @@ const MainLayout = ({children, siteData}) => {
                         left: 0;
                         top: 0;
                         transform: translate(-50%, -50%);
-                        height: 10px;
-                        width: 10px;
+                        height: 6px;
+                        width: 6px;
                         background-color: #FFFFFF;
                         z-index: 55;
                         pointer-events: none;
