@@ -36,28 +36,16 @@ const Work = () => {
               <SmoothScroll>
                 <section className="container">
                   <Navigation pathname={router.pathname}>
-                    <div className="work-details">
-                      <h1>MY SELECTED WORKS</h1>
-                      <div className="work-1 work">
-                        <h1 className="work-title"> <span>1.</span> CHATOUT</h1>
-                      </div>
-                      <div className="work-1 work">
-                        <h1 className="work-title"> <span>2.</span> WOOZ THAT POKEMON?</h1>
-                      </div>
-                    </div>
+        
                   </Navigation>
                 </section>
               </SmoothScroll>
             </MainLayout>
             <style jsx>
         {`
-          .scroll-container {
-            height: 100vh;
-          }
-        
           .container {
             position: relative;
-            height: 200vh;
+            height: 100vh;
             width: 100%;
             background-color: #2E3632;
           }
@@ -81,7 +69,7 @@ const Work = () => {
             left: 0;
             transform: translate(0, 0);
             width: 100%;
-            padding: 0 0 0 10vw;
+            padding: 0 0 0 12vw;
             display: flex;
             flex-direction: column;
           }

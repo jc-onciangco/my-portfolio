@@ -26,7 +26,7 @@ const MainLayout = ({children, siteData}) => {
             cursorDot.style.left = x + 'px'
         })
 
-        gsap.from('.loading > h1', {
+        gsap.from('.loading-logo', {
             y: '-100%',
             opacity: 0,
         })
@@ -34,7 +34,7 @@ const MainLayout = ({children, siteData}) => {
         window.addEventListener('load', () => {
             const tl = gsap.timeline()
             console.log('hahaha')
-            tl.to('.loading > h1', {
+            tl.to('.loading-logo', {
                 y: '100%',
                 opacity: 0,
             }).to('.loading', {
@@ -74,7 +74,7 @@ const MainLayout = ({children, siteData}) => {
                                     end={{scale: 0}}
                                 >
                                 <div className="loading">
-                                    <h1>{'<LOADING.../>'}</h1>
+                                    <div className="loading-logo">JC</div>
                                 </div>
                             </motion.div>
                     }
@@ -86,7 +86,7 @@ const MainLayout = ({children, siteData}) => {
                         position: fixed;
                         top: 0;
                         left: 0;
-                        background-color: #FFFB05;
+                        background-color: #ffd31d;
                         height: 100vh;
                         width: 100%;
                         z-index: 80;
@@ -95,9 +95,19 @@ const MainLayout = ({children, siteData}) => {
                         align-items: center;
                     }
 
-                    .loading > h1 {
-                        font-size: 3rem;
-                        font-family: DelaGothicOne;
+                    .loading-logo {
+                        display: flex;
+                        align-items: center;
+                        background-color: rgb(20, 20, 20) ;
+                        width: ${60 * 3}px;
+                        height: ${60 * 3}px;
+                        color: rgb(248, 248, 248);
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        padding: ${5*3}px ${10}px;
+                        font-weight: 700;
+                        font-size: ${1.3*3}rem;
                     }
 
                     .noisy-style {
@@ -109,8 +119,8 @@ const MainLayout = ({children, siteData}) => {
                         background-image: url('/noisy.gif');
                         z-index: 100;
                         pointer-events: none;
-                        mix-blend-mode: multiply;
-                        opacity: 0.15;
+                        mix-blend-mode: difference;
+                        opacity: 0.1;
                     }
 
                     .cursor-style {
@@ -120,25 +130,12 @@ const MainLayout = ({children, siteData}) => {
                         transform: translate(-50%, -50%) scale(1);
                         height: 50px;
                         width: 50px;
-                        background-color: #FFFB05;
+                        background-color: #ffd31d;
                         z-index: 50;
                         pointer-events: none;
                         border-radius: 50%;
                         mix-blend-mode: difference;
                         transition: 0.1s linear;
-                    }
-
-                    .cursor-style::before {
-                        content: '';
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        height: 105%;
-                        width: 105%;
-                        border-radius: 50%;
-                        background-color: transparent;
-                        border: 1px solid white;
                     }
 
                     .cursor-style-dot {
